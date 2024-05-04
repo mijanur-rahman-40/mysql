@@ -2,9 +2,11 @@
 $ sudo mysql_secure_installation
 
 mysql > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '@A1a'
-
-
 % Password : @A1a
+
+// OR
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
 
 ### Error Fixing Links : 
 
