@@ -11,7 +11,7 @@ CREATE TABLE `payment_methods` (
   PRIMARY KEY (`payment_method_id`)
 ) ENGINE=INNODB AUTO_INCREMENT=5 DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_0900_AI_CI;
 
--- Insering  
+-- Insering new data to payment_methods table 
 INSERT INTO `payment_methods` VALUES (1,'Credit Card');
 INSERT INTO `payment_methods` VALUES (2,'Cash');
 INSERT INTO `payment_methods` VALUES (3,'PayPal');
