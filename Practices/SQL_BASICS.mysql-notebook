@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\nDROP DATABASE IF EXISTS `sql_basic`;\nCREATE DATABASE `sql_basic`; \nUSE `sql_basic`; \n\nCREATE TABLE `user`(\n  `user_id` TINYINT(4) NOT NULL AUTO_INCREMENT,\n  `name` VARCHAR(100) NOT NULL,\n  `address` VARCHAR(10000),\n  PRIMARY KEY(`user_id`)\n) ENGINE=INNODB AUTO_INCREMENT=5 DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_0900_AI_CI;\n\n-- Insering new data to user table -- \nINSERT INTO `user` VALUES(1, 'Mijanur Rahman', '');\nINSERT INTO `user` VALUES(2, 'HASAN Rahman', 'Sylhet');\n\n\nSELECT * FROM `sql_basic`.`user`\n",
+    "content": "\nDROP DATABASE IF EXISTS `sql_basic`;\nCREATE DATABASE `sql_basic`; \nUSE `sql_basic`;  \n\nCREATE TABLE `user`(\n  `user_id` TINYINT(4) NOT NULL AUTO_INCREMENT,\n  `name` VARCHAR(100) NOT NULL,\n  `address` VARCHAR(10000),\n  PRIMARY KEY(`user_id`)\n) ENGINE=INNODB AUTO_INCREMENT=5 DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_0900_AI_CI;\n\n-- Insering new data to user table -- \nINSERT INTO `user` VALUES(1, 'Mijanur Rahman', '');\nINSERT INTO `user` VALUES(2, 'HASAN Rahman', 'Sylhet');\n\n\nSELECT * FROM `sql_basic`.`user` \n",
     "options": {
         "tabSize": 4,
         "insertSpaces": true,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 17,
-                    "column": 1
+                    "lineNumber": 18,
+                    "column": 34
                 },
                 "position": {
-                    "lineNumber": 17,
-                    "column": 1
+                    "lineNumber": 18,
+                    "column": 34
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 4,
+                "lineNumber": 5,
                 "column": 1
             },
-            "firstPositionDeltaTop": -7
+            "firstPositionDeltaTop": -5
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -147,36 +147,36 @@
                         "delimiter": ";",
                         "span": {
                             "start": 83,
-                            "length": 241
+                            "length": 242
                         },
-                        "contentStart": 86,
+                        "contentStart": 87,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 324,
+                            "start": 325,
                             "length": 92
                         },
-                        "contentStart": 365,
+                        "contentStart": 366,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 416,
+                            "start": 417,
                             "length": 56
                         },
-                        "contentStart": 417,
+                        "contentStart": 418,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 472,
+                            "start": 473,
                             "length": 1
                         },
-                        "contentStart": 471,
+                        "contentStart": 472,
                         "state": 3
                     }
                 ]
@@ -211,7 +211,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "9a0d5b0d-4a89-43f2-b15a-64c5622b04e3"
+                        "0ea0c4c2-1f2e-4b55-a108-002fdb3c264f"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -220,7 +220,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 32
+                            "length": 33
                         },
                         "contentStart": 0,
                         "state": 3
@@ -229,8 +229,8 @@
             },
             "data": [
                 {
-                    "tabId": "182923c3-a340-4775-9ea3-17cd5986c5f7",
-                    "resultId": "9a0d5b0d-4a89-43f2-b15a-64c5622b04e3",
+                    "tabId": "f0650c94-c8ea-4017-8c45-e8f2f3f98b03",
+                    "resultId": "0ea0c4c2-1f2e-4b55-a108-002fdb3c264f",
                     "rows": [
                         {
                             "0": 1,
