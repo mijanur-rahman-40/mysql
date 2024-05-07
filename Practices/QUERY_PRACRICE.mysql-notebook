@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "-- Query performing on Mosh Course database : sql_hr, sql_inventory, sql_invooicing, sql_store\nUSE sql_store;\n-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers;\n\n-- Another way\n-- SELECT * FROM `sql_store`.`customers`\n-- Retrieving specific colums of customers\nSELECT points, customer_id, first_name FROM customers; \n-- Filtering cutomers : \n-- KEYWORD order is important\nSELECT *  \nFROM customers\n-- WHERE customer_id = 1\n-- The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.\nORDER BY first_name;\n-- two columns and values\nSELECT 1, 2; \n-- SELECT clause in details\n-- SELECT last_name, first_name, points, points + 10\nSELECT \n  last_name, \n  first_name, \n  points,  \n  points * 10 + 100\nfrom customers;\nSELECT \n  last_name,  \n  first_name, \n  points, \n  (points + 10) * 100,\n  -- adding specific alias. to use alias, use 'AS' keyword before the given new name\n  -- Aliases are used to give a table, or a column in a table, a temporary name.\n  (points + 10) * 100 AS discount_factor,\n  (points + 10) * 100 AS 'discount factor',\n  (points + 10) * 100 AS \"discount factor\"\nfrom customers;\n-- Update column\nSELECT state  \nFROM customers;\n-- Retrieving all distinct state data of customers \n-- \n\n\n\n",
+    "content": "-- Query performing on Mosh Course database : sql_hr, sql_inventory, sql_invooicing, sql_store\nUSE sql_store;\n-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers;\n\n-- Another way\n-- SELECT * FROM `sql_store`.`customers`\n-- Retrieving specific colums of customers\nSELECT points, customer_id, first_name FROM customers; \n-- Filtering cutomers : \n-- KEYWORD order is important \nSELECT *  \nFROM customers\n-- WHERE customer_id = 1\n-- The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.\nORDER BY first_name;\n-- two columns and values\nSELECT 1, 2; \n-- SELECT clause in details\n-- SELECT last_name, first_name, points, points + 10\nSELECT  \n  last_name, \n  first_name, \n  points,  \n  points * 10 + 100\nfrom customers;\nSELECT \n  last_name,  \n  first_name, \n  points, \n  (points + 10) * 100,\n  -- adding specific alias. to use alias, use 'AS' keyword before the given new name\n  -- Aliases are used to give a table, or a column in a table, a temporary name.\n  (points + 10) * 100 AS discount_factor,\n  (points + 10) * 100 AS 'discount factor',\n  (points + 10) * 100 AS \"discount factor\"\nfrom customers;\n-- Update column\nSELECT state  \nFROM customers;\n-- Retrieving all distinct state data of customers \n-- \n\n\n\n",
     "options": {
         "tabSize": 4,
         "insertSpaces": true,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 13,
-                    "column": 30
+                    "lineNumber": 23,
+                    "column": 9
                 },
                 "position": {
-                    "lineNumber": 13,
-                    "column": 30
+                    "lineNumber": 23,
+                    "column": 9
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 12,
+                "lineNumber": 29,
                 "column": 1
             },
-            "firstPositionDeltaTop": 84
+            "firstPositionDeltaTop": 220
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -108,8 +108,8 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "897cbf91-f0d1-447c-ed05-26ee8f2b8c05",
-                        "75dfe039-71b4-4bee-e4fc-0f1e3ff46f4d"
+                        "bda0c7ea-8eb3-40ad-9cbd-4196a6f3bc72",
+                        "2ad8abc7-dc18-4c85-b12e-814241bf820b"
                     ]
                 },
                 "currentHeight": 36,
@@ -137,8 +137,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "897cbf91-f0d1-447c-ed05-26ee8f2b8c05",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "bda0c7ea-8eb3-40ad-9cbd-4196a6f3bc72",
                     "rows": [
                         {
                             "0": 1,
@@ -326,8 +326,8 @@
                     "sql": "-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers"
                 },
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "75dfe039-71b4-4bee-e4fc-0f1e3ff46f4d",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "2ad8abc7-dc18-4c85-b12e-814241bf820b",
                     "rows": [],
                     "executionInfo": {
                         "text": "OK, 0 records retrieved in 0.451ms",
@@ -349,7 +349,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "17562536-c37c-463d-f9c3-34b12eff5354"
+                        "883c326c-1655-42e8-c1fa-88755ee373d8"
                     ]
                 },
                 "currentHeight": 278,
@@ -376,8 +376,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "17562536-c37c-463d-f9c3-34b12eff5354",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "883c326c-1655-42e8-c1fa-88755ee373d8",
                     "rows": [
                         {
                             "0": 2273,
@@ -472,7 +472,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "245a75fb-1470-4cec-9c88-ab4143460a06"
+                        "579b490d-4abb-4e5b-f2de-25602fab274d"
                     ]
                 },
                 "currentHeight": 318,
@@ -481,17 +481,17 @@
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 225
+                            "length": 226
                         },
-                        "contentStart": 55,
+                        "contentStart": 56,
                         "state": 0
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "245a75fb-1470-4cec-9c88-ab4143460a06",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "579b490d-4abb-4e5b-f2de-25602fab274d",
                     "rows": [
                         {
                             "0": 4,
@@ -688,7 +688,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "9e3799b9-2a7c-41a1-f1aa-d190a8917785"
+                        "d26c8c39-fc82-4799-a988-6b71fa58f051"
                     ]
                 },
                 "currentHeight": 36,
@@ -715,8 +715,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "9e3799b9-2a7c-41a1-f1aa-d190a8917785",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "d26c8c39-fc82-4799-a988-6b71fa58f051",
                     "rows": [
                         {
                             "0": 1,
@@ -758,7 +758,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "8c967e71-9e88-4db7-8bfc-ddae55bd4890"
+                        "46eb4ee4-d038-446b-e672-636f73d61a6b"
                     ]
                 },
                 "currentHeight": 324,
@@ -767,7 +767,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 165
+                            "length": 166
                         },
                         "contentStart": 81,
                         "state": 0
@@ -776,8 +776,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "8c967e71-9e88-4db7-8bfc-ddae55bd4890",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "46eb4ee4-d038-446b-e672-636f73d61a6b",
                     "rows": [
                         {
                             "0": "MacCaffrey",
@@ -889,7 +889,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "6006ab4a-e195-4afe-8c5d-3fd2231460c2"
+                        "b81c71a2-60ac-4fb1-913e-e2f13de5c8e2"
                     ]
                 },
                 "currentHeight": 314.9375,
@@ -907,8 +907,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "6006ab4a-e195-4afe-8c5d-3fd2231460c2",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "b81c71a2-60ac-4fb1-913e-e2f13de5c8e2",
                     "rows": [
                         {
                             "0": "MacCaffrey",
@@ -1071,7 +1071,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c8cb4987-6986-4b7e-8bbb-0ee58b5ada79"
+                        "ec926b0c-67ee-4147-ddef-68b32007554c"
                     ]
                 },
                 "currentHeight": 262,
@@ -1089,8 +1089,8 @@
             },
             "data": [
                 {
-                    "tabId": "463117dc-dacc-41b9-a063-eebb111c040f",
-                    "resultId": "c8cb4987-6986-4b7e-8bbb-0ee58b5ada79",
+                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
+                    "resultId": "ec926b0c-67ee-4147-ddef-68b32007554c",
                     "rows": [
                         {
                             "0": "MA"
