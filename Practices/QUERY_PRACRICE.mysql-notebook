@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "-- Query performing on Mosh Course database : sql_hr, sql_inventory, sql_invooicing, sql_store\nUSE sql_store;\n-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers;\n\n-- Another way\n-- SELECT * FROM `sql_store`.`customers`\n-- Retrieving specific colums of customers\nSELECT points, customer_id, first_name FROM customers; \n-- Filtering cutomers : \n-- KEYWORD order is important \nSELECT *  \nFROM customers\n-- WHERE customer_id = 1\n-- The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.\nORDER BY first_name;\n-- two columns and values\nSELECT 1, 2; \n-- SELECT clause in details\n-- SELECT last_name, first_name, points, points + 10\nSELECT  \n  last_name, \n  first_name, \n  points,  \n  points * 10 + 100\nfrom customers;\nSELECT \n  last_name,  \n  first_name, \n  points, \n  (points + 10) * 100,\n  -- adding specific alias. to use alias, use 'AS' keyword before the given new name\n  -- Aliases are used to give a table, or a column in a table, a temporary name.\n  (points + 10) * 100 AS discount_factor,\n  (points + 10) * 100 AS 'discount factor',\n  (points + 10) * 100 AS \"discount factor\"\nfrom customers;\n-- Update column\nSELECT state  \nFROM customers;\n-- Retrieving all distinct state data of customers \n-- \n\n\n\n",
+    "content": "-- Query performing on Mosh Course database : sql_hr, sql_inventory, sql_invooicing, sql_store\nUSE sql_store;\n-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers;\n\n-- Another way\n-- SELECT * FROM `sql_store`.`customers`\n-- Retrieving specific colums of customers\nSELECT points, customer_id, first_name FROM customers; \n-- Filtering cutomers : \n-- KEYWORD order is important \nSELECT *  \nFROM customers\n-- WHERE customer_id = 1\n-- The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.\nORDER BY first_name;\n-- two columns and values\nSELECT 1, 2; \n-- SELECT clause in details\n-- SELECT last_name, first_name, points, points + 10\nSELECT  \n  last_name, \n  first_name, \n  points,  \n  points * 10 + 100\nfrom customers;\n\nSELECT \n  last_name,  \n  first_name, \n  points, \n  (points + 10) * 100,\n  -- adding specific alias. to use alias, use 'AS' keyword before the given new name\n  -- Aliases are used to give a table, or a column in a table, a temporary name.\n  (points + 10) * 100 AS discount_factor,\n  (points + 10) * 100 AS 'discount factor',\n  (points + 10) * 100 AS \"discount factor\"\nfrom customers;\n-- Update column\nSELECT state  \nFROM customers;\n-- Retrieving all distinct state data of customers \n-- \n\n\n\n",
     "options": {
         "tabSize": 4,
         "insertSpaces": true,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 23,
-                    "column": 9
+                    "lineNumber": 18,
+                    "column": 21
                 },
                 "position": {
-                    "lineNumber": 23,
-                    "column": 9
+                    "lineNumber": 18,
+                    "column": 21
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 29,
+                "lineNumber": 12,
                 "column": 1
             },
-            "firstPositionDeltaTop": 220
+            "firstPositionDeltaTop": 31
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -55,6 +55,7 @@
                     ]
                 },
                 "currentHeight": 28,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -80,12 +81,13 @@
                         {
                             "type": 4,
                             "index": 0,
-                            "resultId": "866d7ca4-1190-4a09-ff86-62b2fbd89975",
-                            "content": "OK, 0 records retrieved in 0.442ms"
+                            "resultId": "c6133bd1-0c64-421a-919f-0d65b64e029c",
+                            "content": "OK, 0 records retrieved in 0.552ms"
                         }
                     ]
                 },
                 "currentHeight": 28,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -108,8 +110,8 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "bda0c7ea-8eb3-40ad-9cbd-4196a6f3bc72",
-                        "2ad8abc7-dc18-4c85-b12e-814241bf820b"
+                        "b610a895-b574-453c-c80f-ce3c8dedd380",
+                        "ae86226b-12d5-4026-af4e-b678a2425634"
                     ]
                 },
                 "currentHeight": 36,
@@ -137,8 +139,8 @@
             },
             "data": [
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "bda0c7ea-8eb3-40ad-9cbd-4196a6f3bc72",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "b610a895-b574-453c-c80f-ce3c8dedd380",
                     "rows": [
                         {
                             "0": 1,
@@ -326,8 +328,8 @@
                     "sql": "-- Retrieving all data of customers\n-- WHERE -> to filter the result\nSELECT * \nFROM customers"
                 },
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "2ad8abc7-dc18-4c85-b12e-814241bf820b",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "ae86226b-12d5-4026-af4e-b678a2425634",
                     "rows": [],
                     "executionInfo": {
                         "text": "OK, 0 records retrieved in 0.451ms",
@@ -346,13 +348,8 @@
                 "start": 10,
                 "end": 11,
                 "language": "mysql",
-                "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "883c326c-1655-42e8-c1fa-88755ee373d8"
-                    ]
-                },
                 "currentHeight": 278,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -374,95 +371,7 @@
                     }
                 ]
             },
-            "data": [
-                {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "883c326c-1655-42e8-c1fa-88755ee373d8",
-                    "rows": [
-                        {
-                            "0": 2273,
-                            "1": 1,
-                            "2": "Babara"
-                        },
-                        {
-                            "0": 947,
-                            "1": 2,
-                            "2": "Ines"
-                        },
-                        {
-                            "0": 2967,
-                            "1": 3,
-                            "2": "Freddi"
-                        },
-                        {
-                            "0": 457,
-                            "1": 4,
-                            "2": "Ambur"
-                        },
-                        {
-                            "0": 3675,
-                            "1": 5,
-                            "2": "Clemmie"
-                        },
-                        {
-                            "0": 3073,
-                            "1": 6,
-                            "2": "Elka"
-                        },
-                        {
-                            "0": 1672,
-                            "1": 7,
-                            "2": "Ilene"
-                        },
-                        {
-                            "0": 205,
-                            "1": 8,
-                            "2": "Thacher"
-                        },
-                        {
-                            "0": 1486,
-                            "1": 9,
-                            "2": "Romola"
-                        },
-                        {
-                            "0": 796,
-                            "1": 10,
-                            "2": "Levy"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "points",
-                            "field": "0",
-                            "dataType": {
-                                "type": 4
-                            }
-                        },
-                        {
-                            "title": "customer_id",
-                            "field": "1",
-                            "dataType": {
-                                "type": 4
-                            }
-                        },
-                        {
-                            "title": "first_name",
-                            "field": "2",
-                            "dataType": {
-                                "type": 17
-                            }
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 10 records retrieved in 0.741ms"
-                    },
-                    "totalRowCount": 10,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "-- Retrieving specific colums of customers\nSELECT points, customer_id, first_name FROM customers"
-                }
-            ]
+            "data": []
         },
         {
             "state": {
@@ -472,10 +381,11 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "579b490d-4abb-4e5b-f2de-25602fab274d"
+                        "a036de84-8ab0-4d80-ec45-5c278151d4d6"
                     ]
                 },
                 "currentHeight": 318,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -490,8 +400,8 @@
             },
             "data": [
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "579b490d-4abb-4e5b-f2de-25602fab274d",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "a036de84-8ab0-4d80-ec45-5c278151d4d6",
                     "rows": [
                         {
                             "0": 4,
@@ -688,10 +598,11 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "d26c8c39-fc82-4799-a988-6b71fa58f051"
+                        "061643f7-607b-4f67-82f0-f11b18362ac4"
                     ]
                 },
                 "currentHeight": 36,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -715,8 +626,8 @@
             },
             "data": [
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "d26c8c39-fc82-4799-a988-6b71fa58f051",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "061643f7-607b-4f67-82f0-f11b18362ac4",
                     "rows": [
                         {
                             "0": 1,
@@ -753,15 +664,16 @@
         {
             "state": {
                 "start": 21,
-                "end": 28,
+                "end": 29,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "46eb4ee4-d038-446b-e672-636f73d61a6b"
+                        "449f3bd4-f31b-45ff-e6a8-cf16edc33f8c"
                     ]
                 },
                 "currentHeight": 324,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -771,13 +683,22 @@
                         },
                         "contentStart": 81,
                         "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 166,
+                            "length": 1
+                        },
+                        "contentStart": 165,
+                        "state": 3
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "46eb4ee4-d038-446b-e672-636f73d61a6b",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "449f3bd4-f31b-45ff-e6a8-cf16edc33f8c",
                     "rows": [
                         {
                             "0": "MacCaffrey",
@@ -883,16 +804,17 @@
         },
         {
             "state": {
-                "start": 29,
-                "end": 39,
+                "start": 30,
+                "end": 40,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "b81c71a2-60ac-4fb1-913e-e2f13de5c8e2"
+                        "9d5aaadc-df6c-44de-ad0e-be41a6c59a5d"
                     ]
                 },
                 "currentHeight": 314.9375,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -907,8 +829,8 @@
             },
             "data": [
                 {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "b81c71a2-60ac-4fb1-913e-e2f13de5c8e2",
+                    "tabId": "b042d1f5-9d63-4b9d-f26c-1fb20071f73d",
+                    "resultId": "9d5aaadc-df6c-44de-ad0e-be41a6c59a5d",
                     "rows": [
                         {
                             "0": "MacCaffrey",
@@ -1065,16 +987,25 @@
         },
         {
             "state": {
-                "start": 40,
-                "end": 42,
+                "start": 41,
+                "end": 43,
                 "language": "mysql",
                 "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "ec926b0c-67ee-4147-ddef-68b32007554c"
-                    ]
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1046): ClassicSession.run_sql: No database selected",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
                 },
                 "currentHeight": 262,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1087,66 +1018,12 @@
                     }
                 ]
             },
-            "data": [
-                {
-                    "tabId": "b93b6d3c-f71a-4d24-8a0e-8985e1dd6cfa",
-                    "resultId": "ec926b0c-67ee-4147-ddef-68b32007554c",
-                    "rows": [
-                        {
-                            "0": "MA"
-                        },
-                        {
-                            "0": "VA"
-                        },
-                        {
-                            "0": "CO"
-                        },
-                        {
-                            "0": "FL"
-                        },
-                        {
-                            "0": "TX"
-                        },
-                        {
-                            "0": "IL"
-                        },
-                        {
-                            "0": "TN"
-                        },
-                        {
-                            "0": "FL"
-                        },
-                        {
-                            "0": "CA"
-                        },
-                        {
-                            "0": "GA"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "state",
-                            "field": "0",
-                            "dataType": {
-                                "type": 17
-                            }
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 10 records retrieved in 0.629ms"
-                    },
-                    "totalRowCount": 10,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "-- Update column\nSELECT state  \nFROM customers"
-                }
-            ]
+            "data": []
         },
         {
             "state": {
-                "start": 43,
-                "end": 43,
+                "start": 44,
+                "end": 44,
                 "language": "mysql",
                 "result": {
                     "type": "text",
@@ -1160,6 +1037,7 @@
                     ]
                 },
                 "currentHeight": 28,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1176,10 +1054,10 @@
         },
         {
             "state": {
-                "start": 44,
-                "end": 44,
+                "start": 45,
+                "end": 45,
                 "language": "mysql",
-                "currentHeight": 180,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1196,30 +1074,10 @@
         },
         {
             "state": {
-                "start": 45,
-                "end": 45,
-                "language": "mysql",
-                "currentHeight": 180,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 0
-                        },
-                        "contentStart": 0,
-                        "state": 0
-                    }
-                ]
-            },
-            "data": []
-        },
-        {
-            "state": {
                 "start": 46,
                 "end": 46,
                 "language": "mysql",
-                "currentHeight": 180,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1239,6 +1097,26 @@
                 "start": 47,
                 "end": 47,
                 "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 0
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 48,
+                "end": 48,
+                "language": "mysql",
                 "result": {
                     "type": "text",
                     "text": [
@@ -1251,6 +1129,7 @@
                     ]
                 },
                 "currentHeight": 28,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1267,10 +1146,10 @@
         },
         {
             "state": {
-                "start": 48,
-                "end": 48,
+                "start": 49,
+                "end": 49,
                 "language": "mysql",
-                "currentHeight": 180,
+                "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1279,7 +1158,7 @@
                             "length": 0
                         },
                         "contentStart": 0,
-                        "state": 0
+                        "state": 3
                     }
                 ]
             },
